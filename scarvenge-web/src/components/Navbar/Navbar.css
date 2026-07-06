@@ -371,3 +371,61 @@
 .navbar-spacer {
   height: var(--navbar-height);
 }
+
+@media (max-width: 767px) {
+  .navbar__inner {
+    gap: var(--space-2);
+  }
+
+  .navbar__logo {
+    gap: var(--space-2);
+    min-width: 0;
+  }
+
+  .navbar__logo-img {
+    height: 28px;
+  }
+
+  .navbar__brand {
+    font-size: 1rem;
+  }
+
+  .navbar__actions {
+    gap: 0;
+  }
+
+  .navbar__action-btn,
+  .navbar__mobile-toggle {
+    width: 36px;
+    height: 36px;
+  }
+
+  .navbar__search--open {
+    max-height: 96px;
+    padding-block: var(--space-2) var(--space-3);
+  }
+
+  .navbar__search-form {
+    gap: var(--space-2);
+    padding-inline: var(--space-3);
+  }
+
+  .navbar__search-input {
+    height: 40px;
+    min-width: 0;
+  }
+
+  .mobile-drawer__header,
+  .mobile-drawer__footer {
+    padding-inline: var(--space-4);
+  }
+
+  .mobile-drawer__link {
+    padding-inline: var(--space-4);
+  }
+
+  .mobile-drawer__sub-link {
+    padding-left: var(--space-6);
+    padding-right: var(--space-4);
+  }
+}

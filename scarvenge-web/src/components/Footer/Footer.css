@@ -127,3 +127,41 @@
   color: var(--color-text-muted);
   text-transform: uppercase;
 }
+
+@media (max-width: 767px) {
+  .footer {
+    margin-top: var(--space-8);
+  }
+
+  .footer__main {
+    gap: var(--space-6);
+    padding-block: var(--space-7);
+  }
+
+  .footer__logo-wrap {
+    margin-bottom: var(--space-3);
+  }
+
+  .footer__socials {
+    gap: var(--space-3);
+  }
+
+  .footer__social-btn {
+    width: 42px;
+    height: 42px;
+  }
+
+  .footer__newsletter-btn {
+    width: 100%;
+  }
+
+  .footer__bottom-inner,
+  .footer__legal {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer__payments {
+    width: 100%;
+  }
+}

@@ -362,3 +362,86 @@
 }
 .newsletter__btn:hover { background: var(--color-primary-dark); }
 .newsletter__note { font-size: var(--text-xs); color: rgba(255,255,255,0.35); }
+
+@media (max-width: 767px) {
+  .section-row-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .hero {
+    min-height: 100svh;
+    height: auto;
+    padding-block: calc(var(--navbar-height) + var(--space-7)) var(--space-8);
+  }
+
+  .hero__content {
+    max-width: 100%;
+    padding-right: var(--space-3);
+  }
+
+  .hero__headline {
+    font-size: clamp(2.5rem, 11vw, 4.5rem);
+    line-height: 0.98;
+  }
+
+  .hero__sub {
+    max-width: 100%;
+    font-size: var(--text-base);
+    margin-bottom: var(--space-6);
+  }
+
+  .hero__ctas,
+  .newsletter__form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero__cta,
+  .newsletter__btn,
+  .newsletter__input,
+  .lifestyle-banner__cta {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero__scroll-hint {
+    display: none;
+  }
+
+  .benefits-bar__list,
+  .tech-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .collection-banner {
+    aspect-ratio: 4 / 5;
+  }
+
+  .collection-banner__content,
+  .lifestyle-banner__content {
+    padding: var(--space-5);
+  }
+
+  .lifestyle-banner {
+    min-height: 420px;
+    align-items: flex-end;
+  }
+
+  .lifestyle-banner__headline,
+  .brand-preview__title,
+  .newsletter__title {
+    font-size: var(--text-2xl);
+  }
+
+  .brand-preview__inner {
+    gap: var(--space-5);
+  }
+
+  .brand-preview__logo-badge {
+    width: 48px;
+    height: 48px;
+    right: var(--space-4);
+    bottom: var(--space-4);
+  }
+}

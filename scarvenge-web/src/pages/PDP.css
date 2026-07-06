@@ -101,3 +101,46 @@
 /* Related */
 .pdp__related { margin-top: var(--space-10); }
 .pdp__related-title { font-size: var(--text-2xl); color: var(--color-text-primary); margin-bottom: var(--space-6); }
+
+@media (max-width: 767px) {
+  .pdp__breadcrumb {
+    padding-top: var(--space-4);
+    margin-bottom: var(--space-4);
+  }
+
+  .pdp__layout {
+    gap: var(--space-5);
+  }
+
+  .pdp__badges {
+    top: var(--space-3);
+    left: var(--space-3);
+  }
+
+  .pdp__thumb {
+    width: 68px;
+  }
+
+  .pdp__info {
+    position: static;
+    gap: var(--space-4);
+  }
+
+  .pdp__name,
+  .pdp__price,
+  .pdp__related-title {
+    font-size: var(--text-xl);
+  }
+
+  .pdp__pricing {
+    gap: var(--space-2);
+  }
+
+  .pdp__atc-row {
+    align-items: stretch;
+  }
+
+  .pdp__atc-btn {
+    min-width: 0;
+  }
+}
