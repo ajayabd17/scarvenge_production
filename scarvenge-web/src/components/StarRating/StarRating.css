@@ -1,0 +1,27 @@
+.star-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+.star {
+  display: flex;
+  color: var(--color-border-strong);
+  width: var(--size, 16px);
+  height: var(--size, 16px);
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: default;
+  transition: color var(--duration-fast) var(--ease-standard);
+}
+.star svg { fill: none; }
+.star--filled { color: #D4AF37; }
+.star--filled svg { fill: #D4AF37; }
+button.star { cursor: pointer; }
+button.star:hover,
+button.star:hover ~ .star { color: #D4AF37; }
+.star-rating__count {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-left: var(--space-1);
+}

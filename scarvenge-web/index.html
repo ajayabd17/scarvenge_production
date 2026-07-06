@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#080808" />
+
+    <!-- SEO -->
+    <title>SCARVENGE — Hunt. Perform. Dominate.</title>
+    <meta name="description" content="SCARVENGE is premium activewear engineered for those who train without limits. Compression, cuts, and construction built for predators." />
+    <link rel="canonical" href="https://scarvenge.com/" />
+
+    <!-- OpenGraph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="SCARVENGE" />
+    <meta property="og:title" content="SCARVENGE — Hunt. Perform. Dominate." />
+    <meta property="og:description" content="Premium activewear engineered for those who train without limits." />
+    <meta property="og:url" content="https://scarvenge.com/" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="SCARVENGE — Hunt. Perform. Dominate." />
+    <meta name="twitter:description" content="Premium activewear engineered for those who train without limits." />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Prevent FOUC in dark mode -->
+    <script>
+      (function() {
+        try {
+          var stored = localStorage.getItem('scarvenge-theme');
+          if (stored) {
+            document.documentElement.setAttribute('data-theme', stored);
+          } else {
+            var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
+          }
+        } catch(e) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
+
+    <!-- JSON-LD Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "SCARVENGE",
+      "url": "https://scarvenge.com",
+      "description": "Premium activewear brand engineered for high-performance athletes.",
+      "sameAs": [
+        "https://instagram.com/scarvenge",
+        "https://tiktok.com/@scarvenge"
+      ]
+    }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

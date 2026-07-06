@@ -1,0 +1,17 @@
+.accordion { display: flex; flex-direction: column; }
+.accordion__item { border-bottom: 1px solid var(--color-border); }
+.accordion__trigger {
+  display: flex; align-items: center; gap: var(--space-3);
+  width: 100%; padding: var(--space-4) 0;
+  background: none; border: none; cursor: pointer;
+  text-align: left;
+  transition: color var(--duration-fast) var(--ease-standard);
+}
+.accordion__trigger:hover { color: var(--color-primary); }
+.accordion__icon { display: flex; color: var(--color-text-muted); flex-shrink: 0; }
+.accordion__label { flex: 1; font-size: var(--text-base); font-weight: 500; color: var(--color-text-primary); }
+.accordion__item--open .accordion__label { color: var(--color-primary); }
+.accordion__chevron { color: var(--color-text-muted); flex-shrink: 0; transition: transform var(--duration-fast) var(--ease-standard); }
+.accordion__chevron--open { transform: rotate(180deg); }
+.accordion__panel { overflow: hidden; }
+.accordion__content { padding-bottom: var(--space-4); font-size: var(--text-sm); color: var(--color-text-secondary); line-height: var(--leading-relaxed); }

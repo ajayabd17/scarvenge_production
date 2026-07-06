@@ -1,0 +1,172 @@
+/* ============================================================
+   SCARVENGE DESIGN SYSTEM — CSS TOKENS (SOURCE OF TRUTH)
+   All colors, typography, spacing, radii, shadows, and motion
+   values are defined here. NEVER use magic numbers elsewhere.
+   ============================================================ */
+
+/* ---- LIGHT MODE ------------------------------------------ */
+:root {
+  /* Colors */
+  --color-primary:          #C8102E;
+  --color-primary-dark:     #900B1F;
+  --color-primary-light:    #E8304A;
+  --color-secondary:        #1A1A1A;
+  --color-accent:           #C8102E;
+
+  --color-background:       #F5F4F2;
+  --color-surface:          #FFFFFF;
+  --color-surface-raised:   #FAFAF8;
+  --color-surface-overlay:  rgba(255,255,255,0.85);
+
+  --color-text-primary:     #0D0D0D;
+  --color-text-secondary:   #5C5C5C;
+  --color-text-muted:       #9A9A9A;
+  --color-text-inverse:     #F5F5F5;
+
+  --color-border:           #E2E2E2;
+  --color-border-strong:    #CACACA;
+
+  --color-success:          #1A8A4A;
+  --color-warning:          #D97706;
+  --color-error:            #DC2626;
+  --color-discount:         #C8102E;
+  --color-low-stock:        #D97706;
+
+  /* Navbar */
+  --navbar-bg:              #FFFFFF;
+  --navbar-bg-scrolled:     rgba(255, 255, 255, 0.88);
+  --navbar-height:          68px;
+  --navbar-height-scrolled: 56px;
+
+  /* Surfaces (elevation layers) */
+  --surface-0: #FFFFFF;
+  --surface-1: #F5F4F2;
+  --surface-2: #EEEDE9;
+
+  /* Glass */
+  --glass-bg:               rgba(255, 255, 255, 0.8);
+  --glass-border:           rgba(255, 255, 255, 0.3);
+
+  /* Overlay */
+  --overlay-bg:             rgba(0, 0, 0, 0.55);
+
+  /* ---- TYPOGRAPHY SCALE (fluid, clamp-based) ---- */
+  --font-heading:           'Bebas Neue', system-ui, sans-serif;
+  --font-body:              'Inter', system-ui, -apple-system, sans-serif;
+
+  --text-xs:   clamp(0.75rem,  0.7rem + 0.2vw,   0.8rem);
+  --text-sm:   clamp(0.875rem, 0.8rem + 0.3vw,   0.95rem);
+  --text-base: clamp(1rem,     0.95rem + 0.3vw,   1.125rem);
+  --text-lg:   clamp(1.125rem, 1.05rem + 0.4vw,   1.35rem);
+  --text-xl:   clamp(1.5rem,   1.3rem + 0.8vw,    1.875rem);
+  --text-2xl:  clamp(2rem,     1.6rem + 1.5vw,    2.75rem);
+  --text-3xl:  clamp(2.75rem,  2.1rem + 2.5vw,    4rem);
+  --text-4xl:  clamp(3.5rem,   2.5rem + 4vw,      6rem);
+
+  --leading-tight:   1.1;
+  --leading-snug:    1.2;
+  --leading-normal:  1.5;
+  --leading-relaxed: 1.65;
+
+  --tracking-tight:  -0.02em;
+  --tracking-snug:   -0.01em;
+  --tracking-normal: 0;
+  --tracking-wide:   0.04em;
+  --tracking-wider:  0.08em;
+
+  /* ---- SPACING SCALE (8px base unit) ---- */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  24px;
+  --space-6:  32px;
+  --space-7:  48px;
+  --space-8:  64px;
+  --space-9:  96px;
+  --space-10: 128px;
+  --space-11: 192px;
+
+  /* ---- BORDER RADIUS ---- */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   16px;
+  --radius-xl:   24px;
+  --radius-full: 9999px;
+
+  /* ---- SHADOWS & ELEVATION ---- */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.08);
+  --shadow-lg: 0 16px 40px rgba(200,16,46,0.12), 0 4px 12px rgba(0,0,0,0.14);
+  --shadow-xl: 0 24px 64px rgba(200,16,46,0.18), 0 8px 24px rgba(0,0,0,0.2);
+  --shadow-glow: 0 0 24px rgba(200,16,46,0.35);
+
+  /* ---- MOTION SYSTEM ---- */
+  --duration-instant: 100ms;
+  --duration-fast:    200ms;
+  --duration-base:    300ms;
+  --duration-slow:    500ms;
+
+  --ease-standard:   cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-decelerate: cubic-bezier(0, 0, 0.2, 1);
+  --ease-accelerate: cubic-bezier(0.4, 0, 1, 1);
+  --ease-spring:     cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ---- GRID / LAYOUT ---- */
+  --max-width: 1440px;
+  --content-padding-mobile: var(--space-4);
+  --content-padding-desktop: var(--space-6);
+  --section-padding-v: var(--space-9);
+
+  /* ---- Z-INDEX LAYERS ---- */
+  --z-base:       1;
+  --z-raised:     10;
+  --z-dropdown:   100;
+  --z-sticky:     200;
+  --z-drawer:     300;
+  --z-modal:      400;
+  --z-toast:      500;
+  --z-overlay:    600;
+}
+
+/* ---- DARK MODE ------------------------------------------- */
+[data-theme="dark"] {
+  --color-background:       #080808;
+  --color-surface:          #111111;
+  --color-surface-raised:   #181818;
+  --color-surface-overlay:  rgba(17,17,17,0.88);
+
+  --color-text-primary:     #F0F0F0;
+  --color-text-secondary:   #A0A0A0;
+  --color-text-muted:       #606060;
+  --color-text-inverse:     #0D0D0D;
+
+  --color-border:           #2A2A2A;
+  --color-border-strong:    #3A3A3A;
+
+  --navbar-bg:              #0D0D0D;
+  --navbar-bg-scrolled:     rgba(8, 8, 8, 0.92);
+
+  --surface-0: #111111;
+  --surface-1: #181818;
+  --surface-2: #202020;
+
+  --glass-bg:               rgba(17, 17, 17, 0.85);
+  --glass-border:           rgba(255, 255, 255, 0.06);
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.5), 0 1px 2px rgba(0,0,0,0.4);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.6), 0 2px 4px rgba(0,0,0,0.5);
+  --shadow-lg: 0 16px 40px rgba(200,16,46,0.2), 0 4px 12px rgba(0,0,0,0.7);
+  --shadow-xl: 0 24px 64px rgba(200,16,46,0.25), 0 8px 24px rgba(0,0,0,0.8);
+  --shadow-glow: 0 0 32px rgba(200,16,46,0.5);
+}
+
+/* ---- REDUCED MOTION OVERRIDES ---------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-instant: 0ms;
+    --duration-fast:    0ms;
+    --duration-base:    0ms;
+    --duration-slow:    0ms;
+  }
+}
